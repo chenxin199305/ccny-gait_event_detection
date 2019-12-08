@@ -1,0 +1,340 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   46 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "windowLengthBuffer"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:230-248"\
+    }\
+    ChartData {\
+      Name         "windowLengthBuffer_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:230-248"\
+    }\
+    ChartData {\
+      Name         "windowLengthFilteredBuffer"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:342-368"\
+    }\
+    ChartData {\
+      Name         "windowLengthFilteredBuffer_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:342-368"\
+    }\
+    ChartData {\
+      Name         "TimeStartHS"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:478-489"\
+    }\
+    ChartData {\
+      Name         "timeTickCount"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:546-559"\
+    }\
+    ChartData {\
+      Name         "stepLength"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:620-630"\
+    }\
+    ChartData {\
+      Name         "peakPositions"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:685-698"\
+    }\
+    ChartData {\
+      Name         "peakPositions_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:685-698"\
+    }\
+    ChartData {\
+      Name         "peakValues"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:782-792"\
+    }\
+    ChartData {\
+      Name         "peakValues_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:782-792"\
+    }\
+    ChartData {\
+      Name         "peakGradients"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:870-883"\
+    }\
+    ChartData {\
+      Name         "peakGradients_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:870-883"\
+    }\
+    ChartData {\
+      Name         "TOHSThreshold"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:967-980"\
+    }\
+    ChartData {\
+      Name         "TOHSThreshold_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:967-980"\
+    }\
+    ChartData {\
+      Name         "TOHSPositions"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1122-1135"\
+    }\
+    ChartData {\
+      Name         "TOHSPositions_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1122-1135"\
+    }\
+    ChartData {\
+      Name         "TOHSValues"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1219-1229"\
+    }\
+    ChartData {\
+      Name         "TOHSValues_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1219-1229"\
+    }\
+    ChartData {\
+      Name         "TOHSGradients"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1307-1320"\
+    }\
+    ChartData {\
+      Name         "TOHSGradients_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1307-1320"\
+    }\
+    ChartData {\
+      Name         "TOHSDetectFlag"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1404-1418"\
+    }\
+    ChartData {\
+      Name         "detectResult"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1484-1496"\
+    }\
+    ChartData {\
+      Name         "lastHS"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1558-1564"\
+    }\
+    ChartData {\
+      Name         "lastTO"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1618-1624"\
+    }\
+    ChartData {\
+      Name         "Timeswing"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1678-1687"\
+    }\
+    ChartData {\
+      Name         "HSPositions"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1746-1757"\
+    }\
+    ChartData {\
+      Name         "HSPositions_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1746-1757"\
+    }\
+    ChartData {\
+      Name         "HSValues"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1837-1845"\
+    }\
+    ChartData {\
+      Name         "HSValues_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1837-1845"\
+    }\
+    ChartData {\
+      Name         "HSGradients"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1919-1930"\
+    }\
+    ChartData {\
+      Name         "HSGradients_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:1919-1930"\
+    }\
+    ChartData {\
+      Name         "Timestance"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2010-2020"\
+    }\
+    ChartData {\
+      Name         "TOPositions"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2081-2092"\
+    }\
+    ChartData {\
+      Name         "TOPositions_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2081-2092"\
+    }\
+    ChartData {\
+      Name         "TOValues"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2172-2180"\
+    }\
+    ChartData {\
+      Name         "TOValues_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2172-2180"\
+    }\
+    ChartData {\
+      Name         "TOGradients"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2254-2265"\
+    }\
+    ChartData {\
+      Name         "TOGradients_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2254-2265"\
+    }\
+    ChartData {\
+      Name         "stepLengths"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2345-2356"\
+    }\
+    ChartData {\
+      Name         "stepLengths_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2345-2356"\
+    }\
+    ChartData {\
+      Name         "stepCount"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2435-2444"\
+    }\
+    ChartData {\
+      Name         "stepPositions"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2499-2512"\
+    }\
+    ChartData {\
+      Name         "stepPositions_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2499-2512"\
+    }\
+    ChartData {\
+      Name         "stepValues"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2595-2605"\
+    }\
+    ChartData {\
+      Name         "stepValues_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "imu_gait_detection:5446:2595-2605"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
